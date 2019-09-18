@@ -41,6 +41,9 @@ int main()
 				if(size_t pos = (line.find(*it)) != std::string::npos)
 				{
 					found = Found::black;
+
+					// Eliminamos el keyword de la frase.
+					line.replace(0, it->length(), "");
 				}
 			}
 
@@ -50,6 +53,9 @@ int main()
 				if(size_t pos = (line.find(*it)) != std::string::npos)
 				{
 					found = Found::white;
+					
+					// Eliminamos el keyword de la frase.
+					line.replace(0, it->length(), "");
 				}
 			}
 
